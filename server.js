@@ -4,13 +4,14 @@ const app = express()
 
 // Middleware
 app.use(express.json())
+app.use(express.static('Public'))   
 
 // Rutas
 const ocrRoutes = require('./Routes/OcrRoutes')
 const deteccionRoutes = require('./Routes/DeteccionRoutes')
 
 app.use('/ocr', ocrRoutes)
-app.use('/deteccion', deteccionRoutes)
+app.use('/deteccion', deteccionRoutes)  
 
 // Servidor
 const PORT = process.env.PORT || 3000
