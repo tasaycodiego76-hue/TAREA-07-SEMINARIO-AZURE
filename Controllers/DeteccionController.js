@@ -23,7 +23,7 @@ exports.detectarObjetos = async (req, res) => {
             throw new Error(errorData.error.message)
         }
 
-        // Azure devuelve el resultado inmediatamente (no necesita polling)
+        // Azure devuelve el resultado inmediatamente
         const data = await response.json()
 
         // Formatear los objetos detectados
